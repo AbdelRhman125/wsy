@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="fontawesome-free-5.14.0-web/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.min.css"> 
+
+    <title>Document</title>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+/* start globel */
+html {
+  scroll-behavior: smooth;
+}
+body{
+          font-family: 'Open Sans', sans-serif;
+}
+.scrolled{
+    background-color: rgb(0, 0, 0);
+}
+/* start header */
+.header{
+    background: url(2454628.png);
+    -webkit-background-size:cover ;
+    -moz-background-size:cover ;
+    -o-background-size:cover ;
+    background-size:cover ;
+    position: relative;
+    height: 100vh;
+    color: #ffffff;
+    background-attachment: fixed;
+}
+.header .overlay{
+    padding-top: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width:767px){
+    .header {
+        height: 154vh;
+    } 
+}
+.header  h1{
+    font-size: 60px;
+    font-weight: bold;
+}
+.header  h1 span,
+a span
+{
+    font-weight: normal;
+    color: #F63D3A;
+}
+.header  h1 ~ .lead{
+    font-size: 30px;
+}
+.header  h1 ~ .lead::after{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    margin: 25px 0px;
+}
+@media (max-width:767px){
+    .header  h1 ~ .lead::after{
+        margin: 25px auto;
+    }
+}
+.header button{
+    background: transparent;
+    padding: 8px 15px;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    outline: none;
+}
+@media (max-width:767px){
+    .header button{
+        margin: 25px auto;
+    }
+}
+.load{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  /*change these sizes to fit into your project*/
+  width:140px;
+  height:140px;
+}
+.load hr{
+  border:0;
+  margin:0;
+  width:50%;
+  height:50%;
+  position:absolute;
+  border-radius:50%;
+  animation:spin 2s ease infinite;
+}
+
+.load :first-child{background:#19A68C;
+  animation-delay:-1.5s}
+.load :nth-child(2){background:#F63D3A;
+  animation-delay:-1s}
+.load :nth-child(3){background:#FDA543;
+  animation-delay:-0.5s;
+}
+.load :last-child{
+  background:rgb(0, 183, 255);
+}
+
+@keyframes spin{
+  0%,100%{
+    transform:translate(0)
+  }
+  25%{
+    transform:translate(160%)
+  }
+  50%{
+    transform:translate(160%, 160%)
+  }
+  75%{
+    transform:translate(0, 160%)
+  }
+}
+/* end header */
+/* start price */
+.price-options{
+    padding: 80px 0;
+    background: rgba(0, 0, 0, 0.055);   
+
+}
+.price-options .price-option-head {
+    font-weight: bold;
+    font-size: 50px;
+    }
+.price-options .price-desc{
+    margin-bottom: 50px;
+    color: #757575;
+    font-size: 17px;
+}
+.price-options .price-box{
+background-color: rgba(206, 206, 206, 0.363);
+}
+.price-options .price-box .plan-head{
+    background-color: #133b5c;
+    color: #fff;
+    padding: 15px 0;
+    margin: 0;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+    }
+.price-options .price-box .option-price{
+    background-color: #133b5c;
+    padding: 20px 0 30px;
+}
+
+.price-options .option-price .price{ 
+font-size: 70px;
+color: #fff;
+display: block;
+font-weight: bold;
+}
+.price-options .option-price .price .usd{ 
+    font-size: 40px;
+    }
+.price-options .option-price .period{
+    font-weight: 700;
+    font-size: 18px;
+    color: rgb(207, 207, 207);
+}
+.price-options .option-price{
+    border-bottom: 5px solid #ea5455;
+}
+.price-options .configuration li{
+padding: 10px;
+border-bottom: 1px solid #2d4059;
+}
+.price-options .Most-Pop{
+    background-color: #ea5455;
+    color: #fff;
+    padding: 5px 10px 10px;
+    margin-bottom: 0;
+}
+.price-options .basic,
+.price-options .enterprise{
+    margin-top: 45px;
+}  
+.price-box  input{
+border: none;
+background: rgba(207, 207, 207, 0.623);
+color: rgb(19, 19, 19);
+border: 1px solid #133b5c7e;
+
+}
+.price-box button{
+  background: 0;
+  border: 1px solid #133b5c;
+  padding: 9px
+}
+/* links */
+.links {
+  padding: 100px 0;
+}
+.links input{
+  padding: 9px;
+  border-radius:5px; 
+  width: 250px;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+/* general styling */
+
+
+.counter {
+  color: #333;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.counter h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+.counter li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+.counter .time-section h1{
+  align-items: center;
+}
+
+.counter li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.counter .message {
+  font-size: 4rem;
+}
+
+#content {
+  display: none;
+  padding: 1rem;
+}
+
+.counter .emoji {
+  padding: 0 .25rem;
+}
+
+@media all and (max-width: 768px) {
+ .counter h1 {
+    font-size: 1.5rem;
+  }
+  
+  .counter li {
+    font-size: 1.125rem;
+    padding: .75rem;
+  }
+  
+  .counter li span {
+    font-size: 3.375rem;
+  }
+}
+
+/* Wrapper */
+
+/* start footer */
+.footer{
+   background:#3F5C78;
+   color: #fff;
+   overflow: hidden;
+   padding: 40px 0;
+ }
+  .footer .copyright{
+    float:left;
+    margin-left: 50px;
+  }
+   .footer .design{
+     float:right;
+   }
+/* end footer */
+.nav-link{
+  margin-left: 70px
+}
+/* ///////////////////////////////////////////////////////////////// */
+
+.contatainrer{
+ text-align: center;
+
+}
+.contatainrer .btn{
+  border: 1px solid #133b5c ;
+  background: none;
+  font-size: 25px;
+  font-family:monospace;
+  padding:10px 20px;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.7s;
+  position: relative;
+  overflow: hidden;
+}
+.contatainrer .btn1,.btn2{
+  color:#2980b9;
+}
+.btn3,.btn4{
+  color: #fff;
+}
+.contatainrer.btn1:hover,.contatainrer .btn2:hover{
+  color: #fff;
+}
+.contatainrer .btn3:hover,.contatainrer .btn4:hover{
+  color:#133b5c;
+}
+.contatainrer .btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #133b5c;
+  z-index: -1;
+  transition: 0.8s;
+}
+.contatainrer .btn1::before,.contatainrer .btn3::before{
+   top:0;
+   border-radius: 0 0 50% 50%;
+}
+.contatainrer .btn2::before, .contatainrer .btn4::before{
+   bottom: 0;
+   border-radius: 50% 50% 0 0;
+}
+.contatainrer .btn3::before,.contatainrer .btn4::before{
+   height: 180%;
+}
+.contatainrer .btn1:hover:before,.contatainrer .btn2:hover:before{
+   height: 180%;
+ }
+ .contatainrer .btn3:hover:before,.contatainrer .btn4:hover:before{
+   height: 0%;
+ }
+
+
+.sm a{
+  display: inline-block;
+  font-size: 35px;
+  width: 45px;
+  height: 45px;
+  line-height: 0px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 16px;
+  transition: .4s linear;
+  position: relative;
+}
+.sm a::before, .sm a::after{
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: .4s linear;
+}
+.sm a:hover{
+  transform: scale(1);
+  color: #000;
+}
+
+.sm a:hover::before{
+  border-left: 2px solid;
+  border-right: 2px solid;
+  transform: skewX(20deg);
+}
+
+.sm a:hover::after{
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  transform: skewY(-20deg);
+}
+</style>
+</head>
+<body>
+       <!-- start header  -->
+       <nav class="navbar navbar-expand-lg navbar-transparent bg-transparent">
+        <a class="navbar-brand" href="#"><img style="width:50px" src="122822559_845794716162484_5661998860395141664_n.jpg" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#Home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#price">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Map">Map</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#Social Media" tabindex="-1" aria-disabled="true">Social Media</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+       <div id="Home" class="header">
+          <div class="overlay">
+          <div class="container">
+            <div class="row centering-vh">
+              <div class="col-md-6">
+                <h1 class="uppercase text-center-xs">Tokan<span>-WSY</span></h1>
+                <br>
+                <h2>WIKI SIMPLIFY</h2>
+
+             <p class="text-center-xs">The new launch of the digital payments system through our project with the latest technologies in the processing of digital payments around the world</p>
+                   <button><a href="https://docs.google.com/document/d/1Jxxd2nM50Q5_HyFPPayq_Wwmy3a4bTrd2bxNBCQHwsc/edit?usp=drivesdk" target="">Wihte Paper</a> </button>
+
+              </div>
+              <div class="col-md-6 col-sm-8 " >
+             <form class="form">
+               <h2 class="text-center">Say <span>Holle</span> WSY</h2>
+               <div class="load">
+                  <hr/><hr/><hr/><hr/>
+
+                </div>
+             </form>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+        <!-- end header  -->
+        <!-- strat price  -->
+<div id="About" class="price-options text-center">
+    <div class="container">
+      <h2 class="price-head h1 head-border-center uppercase ">About WSY</h2>
+      <p class="price-desc">
+        Is an open-source protocol based on the ERC20 network .
+Allows carriers to pay through different online payment gateways. 
+Different stores such as Amazon and Express will be contracted to accept WSY payment through different payment gateways and no commission or fee.</p>
+    <div class="row"> 
+      <div class="col-md-4" >
+        <div class="price-box basic">
+        <h3 class="plan-head">Market Value</h3>
+        <div class="option-price">
+          <span class="price">
+            <span class="usd">$</span>165000
+            </span>
+        <span class="period">.</span>
+      </div>
+      <ul class="list-unstyled configuration">
+        <li>Token</li>
+        <li>Token Type</li>
+        <li>ICO Token Price</li>
+        <li>Fundraising Goal</li>
+        <li>Total Tokens</li>
+        <li>Available for Token sale</li>
+        <li>Min/Max Personal Cap</li>
+        <li>Accpet</li>
+      </ul>
+      </div>
+    </div>
+  
+  
+    <div class="col-md-4">
+      <div class="price-box enterprise">
+        <h3 class="plan-head">Available For Sale</h3>
+         <div class="option-price">
+           <span class="price">
+            <span class="usd"></span>1,100,000
+            </span>
+            <span class="period">WSY</span>
+          </div>
+        <ul class="list-unstyled configuration">
+            <li>WSY</li>
+            <li>ERC20</li>
+            <li>1.00 WSY = 0.15 USD</li>
+            <li>2.500.000 Token</li>
+            <li>9.000.000 Token</li>
+            <li>22%</li>
+            <li>500/5000</li>
+            <li>USDC/USDT TRC20</li>
+  </ul>
+  </div>
+  </div>
+  <div class="col-md-4">
+      <div class="price-box enterprise">
+        <h3 class="plan-head">Enterprise</h3>
+         <div class="option-price">
+           <span class="price">
+            <span class="usd">$</span>0.15$
+            </span>
+            <span class="period">TOKEN PRICE</span>
+          </div>
+          <form action="" id="price">
+              <ul class="list-unstyled configuration">
+                  <li>WSY</li>
+                  <li>
+               <input value="0.15"  class="" type="text" name="1st-number" id="1stNum" min="0" max="1000000 "> 
+                  </li>
+                  <li>
+                  <h3 >Number of TOKEN</h3>                    
+                  </li>
+                  <li>
+                   <input class="Calculate-text" type="text" name="2nd-number"id="2ndNum" min="0" max="1000000" placeholder=" ">                     
+                  </li>
+                  <li>
+                      <p >Minimum 50 WSY</p>  
+                  </li>
+
+                   <li> 
+                  <button type="submit" class="" value="Multiply" id="submitNum">Send Output</button>   
+                  </li>
+                  
+                  <li><p id="demo"></p></li>
+
+                </ul>
+          </form>
+
+            </div>
+          </div>
+  </div>
+    </div>
+  </div>
+  </div>
+    </div>
+  </div>
+  
+  <!-- end price  -->
+  <!-- links -->
+       <div class="links">
+          <div class="container">
+              <div class="contatainrer">
+                  <button class="btn btn1" ><a href="https://etherscan.io/token/0x7277e20b994c92ff851b99439ac48f7cfccede24">Etherscan</a> </button> 
+                  <button class="btn btn3 " ><a href="https://t.me/WIKISWY">BUY WSY</a></button>
+
+                </div>
+                   
+       <div class="counter">
+          <div class="container">
+              <h1 id="headline">Sale Starting Counter</h1>
+              <div id="countdown">
+                <ul>
+                  <li><span id="days"></span>days</li>
+                  <li><span id="hours"></span>Hours</li>
+                  <li><span id="minutes"></span>Minutes</li>
+                  <li><span id="seconds"></span>Seconds</li>
+                </ul>
+              </div>
+              <div class="message">
+                <div id="content">
+                  <span class="emoji">🥳</span>
+                  <span class="emoji">🎉</span>
+                  <span class="emoji">🎂</span>
+                </div>
+              </div>
+            </div>>
+
+       </div>
+<img id="Map" src="123241894_1067420077023724_1014669352417976334_n.png" alt="">
+
+       </div>
+      </div>
+                    <!-- start footer -->
+                    <div class="footer">
+                      <div class="container">
+                        <div class="col-md-4">
+                            <span class="copyright">&copy;2020 COPYRIGT WSY</span>
+
+                        </div>
+                        <div class="col-md-8" id="Social Media">
+                            <div class="sm">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-behance"></i></a>
+                              </div>
+
+                        </div>
+                          <span class="design">DESIGN BY WSY</span>
+
+                        
+                      </div>
+                    </div>
+                   <!-- end footer -->
+      <script src="fontawesome-free-5.14.0-web/js/all.min.js"></script>
+      <script src="bootstrap-4.5.2-dist/js/bootstrap.min.js"></script> 
+      <script src="js/jquery-2.2.4.min.js"></script>
+
+<script>
+  submitNum.onclick = function multiplyNum()
+{
+  var firstNum = document.getElementById("1stNum").value;
+  var secondNum = document.getElementById("2ndNum").value;
+  var product = firstNum*secondNum;
+  alert(product);
+}
+document.getElementById("demo").innerHTML ;
+"use strict";
+
+var second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
+var countDown = new Date('Nov 31 , 2020 00:00:00').getTime(),
+    x = setInterval(function () {
+  var now = new Date().getTime(),
+      distance = countDown - now;
+  document.getElementById('days').innerText = Math.floor(distance / day), document.getElementById('hours').innerText = Math.floor(distance % day / hour), document.getElementById('minutes').innerText = Math.floor(distance % hour / minute), document.getElementById('seconds').innerText = Math.floor(distance % minute / second); //do something later when date is reached
+  //if (distance < 0) {
+  //  clearInterval(x);
+  //  'IT'S MY BIRTHDAY!;
+  //}
+}, second);
+
+
+</script>
+</body>
+</html>
